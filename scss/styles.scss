@@ -1,12 +1,11 @@
 @import "./utilities/variables";
-
-@import "./utilities/extend";
-
-@import "./utilities/mixin";
-
 @import "./utilities/globales";
-
+@import "./utilities/extend";
+@import "./utilities/mixin";
+@import "./components/main";
 
 @import "./components/header";
-@import "./pages/main-index";
+@import "./components/news";
 @import "./components/footer";
+@import "./components/videos";
+@import "./components/photos";

@@ -1,0 +1,21 @@
+/* Styles Video */
+.video-section {
+    @include flex-center;
+    flex-wrap: wrap;
+}
+
+.video-container {
+    flex: 1;
+    margin: 10px;
+    max-width: 100%;
+    text-align: center;
+
+    h2, p {
+        padding: 0 1rem;
+    }
+
+    div video {
+        width: 100%;
+        height: auto;
+    }
+}

@@ -1,0 +1,66 @@
+/* Pagina eventos */
+main.events-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.event {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+    img {
+        width: 100%;
+        height: 90%;
+    }
+
+    h2 {
+        margin: 0;
+        padding: 1rem;
+        background-color: $color-primario;
+        color: white;
+    }
+}
+
+/* Pagina estadisticas */
+.luchador {
+    display: grid;
+    grid-template-columns: auto 1fr; 
+    gap: 20px; 
+    margin-bottom: 20px;
+    
+    .imagen {
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+        }
+    }
+    
+    .estadisticas {
+        h3 {
+            margin-top: 0;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+            
+            li {
+                margin-bottom: 8px;
+                
+                strong {
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
+
+
+

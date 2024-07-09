@@ -1,50 +1,48 @@
-/* Styles header */
+/* Styles Header */
 header {
-    background-color: #2C3E50;
+    background-color: $color-primario;
     color: white;
     padding: 1rem;
+
+    img.logos {
+        height: 40px;
+    }
+
+    &.sticky {     
+        position: sticky;
+        top: 0;
+        z-index: 100;     
+    }
 }
 
-header img.logos {
-    height: 40px;
-}
-
-header.sticky {     
-    position: sticky;
-    top: 0;
-    z-index: 100;     
-}
-
-/* Navbar Styles */
 nav {
     flex: 1;
-}
 
-nav ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    justify-content: center;
-}
+    ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        justify-content: center;
 
-nav ul li {
-    margin-right: 40px;
-}
+        li {
+            margin-right: 40px;
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 20px;
-}
+            a {
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 20px;
 
-nav ul li a:hover {
-    color: rgb(40, 163, 245);
+                &:hover {
+                    color: $color-secundario;
+                }
+            }
+        }
+    }
 }
 
 .search-container {
-    display: flex;
-    align-items: center;
+    @include flex-center;
     margin-left: auto;
 }

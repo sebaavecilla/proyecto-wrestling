@@ -1,13 +1,13 @@
-/* Styles footer */
+/* Styles Footer */
 footer {
-    background-color: #2C3E50;
+    background-color: $color-primario;
     color: white;
     text-align: center;
     padding: 1rem;
-}
 
-footer i {
-    font-size: 25px;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    i {
+        font-size: 25px;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
 }
