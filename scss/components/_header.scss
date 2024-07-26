@@ -1,43 +1,85 @@
-/* Styles Header */
 header {
-    background-color: $color-primario;
-    color: white;
-    padding: 1rem;
-
-    img.logos {
-        height: 40px;
-    }
-
-    &.sticky {
-        position: sticky;
-        top: 0;
-        z-index: 100;
-    }
-
-    .navbar-toggler {
-        display: none;
-        cursor: pointer;
-        font-size: 24px;
-        color: white;
-    }
-
-    .navbar-collapse {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: #333;
-        width: 100%;
-        text-align: center;
-
-        .nav-item {
-            margin: 10px 0;
+    background-color: $navbar-bg;
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  
+      .logos {
+        height: 50px; 
+      }
+  
+      .navbar-toggler {
+        background-color: transparent;
+        border: none;
+        i {
+          color: $navbar-toggler-color; 
+          font-size: 45px; 
         }
+      }
+  
+      nav {
+        .nav {
+          margin-left: auto;
+          .nav-item {
+            margin-left: 15px; 
+          }
+        }
+      }
+
+      #navbarNav {
+        .navbar-nav {
+          .nav-link {
+            color: $navbar-color;
+            &:hover {
+              color: $navbar-link-hover-color; 
+            }
+          }
+        }
+      }
+
+      .nav-link {
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+      
+        &:hover {
+          color: #007bff;
+        }
+    
+      }
+  
+      // Search
+      #searchForm {
+        form {
+          display: flex;
+          align-items: center;
+          input {
+            width: auto;
+          }
+          button {
+            margin-left: 10px;
+          }
+        }
+      }
+      
+      form.d-md-flex {
+        display: flex; 
+        align-items: center;
+        input {
+          width: auto;
+        }
+        button {
+          margin-left: 10px;
+        }
+      }
+      
+      button.btn-outline-success {
+        i {
+          color: $navbar-color; 
+          font-size: 24px; 
+        }
+      }
     }
-}
-
-
-.search-container {
-    @include flex-center;
-    margin-left: auto;
-}
-
+  }

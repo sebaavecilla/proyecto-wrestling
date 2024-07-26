@@ -1,34 +1,32 @@
-@media (max-width: 768px) {
-  .navbar-toggler {
-    display: block;
-  }
-  .navbar-collapse {
-    display: none;
-  }
-  .navbar-collapse.collapse {
-    display: flex !important;
-    flex-direction: column;
-    align-items: center;
-    background-color: #333;
+@media (max-width: 767px) {
+  #searchToggle {
+    display: inline-block;
   }
   .navbar-nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
     text-align: center;
   }
   .navbar-nav .nav-item {
-    margin: 10px 0;
+    margin-bottom: 10px;
   }
 }
-/* Styles Body */
+@media (min-width: 768px) {
+  .navbar-collapse {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+@media (max-width: 767px) {
+  #searchForm.show {
+    display: flex;
+  }
+}
 body {
-  color: #333;
+  color: #000000;
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
-  background-color: rgba(48, 44, 40, 0.295);
+  background-color: rgb(154, 158, 158);
 }
 
 /* Pagina eventos */
@@ -53,7 +51,7 @@ main.events-grid {
 .event h2 {
   margin: 0;
   padding: 1rem;
-  background-color: #2C3E50;
+  background-color: #000000;
   color: white;
 }
 
@@ -84,43 +82,69 @@ main.events-grid {
   margin-right: 5px;
 }
 
-/* Styles Header */
 header {
-  background-color: #2C3E50;
-  color: white;
-  padding: 1rem;
+  background-color: #000000;
 }
-header img.logos {
-  height: 40px;
-}
-header.sticky {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-header .navbar-toggler {
-  display: none;
-  cursor: pointer;
-  font-size: 24px;
-  color: white;
-}
-header .navbar-collapse {
+header .container {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  background-color: #333;
-  width: 100%;
-  text-align: center;
+  justify-content: space-between;
 }
-header .navbar-collapse .nav-item {
-  margin: 10px 0;
+header .container .logos {
+  height: 50px;
 }
-
-.search-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+header .container .navbar-toggler {
+  background-color: transparent;
+  border: none;
+}
+header .container .navbar-toggler i {
+  color: #f7f7f7;
+  font-size: 45px;
+}
+header .container nav .nav {
   margin-left: auto;
+}
+header .container nav .nav .nav-item {
+  margin-left: 15px;
+}
+header .container #navbarNav .navbar-nav .nav-link {
+  color: #ffffff;
+}
+header .container #navbarNav .navbar-nav .nav-link:hover {
+  color: rgb(39, 115, 117);
+}
+header .container .nav-link {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+}
+header .container .nav-link:hover {
+  color: #007bff;
+}
+header .container #searchForm form {
+  display: flex;
+  align-items: center;
+}
+header .container #searchForm form input {
+  width: auto;
+}
+header .container #searchForm form button {
+  margin-left: 10px;
+}
+header .container form.d-md-flex {
+  display: flex;
+  align-items: center;
+}
+header .container form.d-md-flex input {
+  width: auto;
+}
+header .container form.d-md-flex button {
+  margin-left: 10px;
+}
+header .container button.btn-outline-success i {
+  color: #ffffff;
+  font-size: 24px;
 }
 
 /* Styles News */
@@ -129,7 +153,7 @@ header .navbar-collapse .nav-item {
 }
 .news h2 {
   text-align: center;
-  color: #2C3E50;
+  color: #000000;
 }
 .news article {
   background-color: #d7d1db;
@@ -161,7 +185,7 @@ article img {
 
 /* Styles Footer */
 footer {
-  background-color: #2C3E50;
+  background-color: #000000;
   color: white;
   text-align: center;
   padding: 1rem;

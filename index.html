@@ -25,44 +25,53 @@
 </head>
 <body>
     <header class="sticky-top py-3">
-    <div class="container d-flex">
-        <a href="./index.html">
-            <img class="logos" src="./assets/img/logo.png" alt="logo">
-        </a>
-        <!-- Botón del menú hamburguesa -->
-        <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <!-- Menú de navegación para dispositivos grandes -->
-        <nav class="d-none d-md-block">
-            <ul class="nav">
-                <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link" href="./pages/eventos.html">Eventos</a></li>
-                <li class="nav-item"><a class="nav-link" href="./pages/campeones.html">Campeones</a></li>
-                <li class="nav-item"><a class="nav-link" href="./pages/estadisticas.html">Estadísticas</a></li>
-                <li class="nav-item"><a class="nav-link" href="./pages/horarios.html">Horarios</a></li>
-            </ul>
-        </nav>
-        <!-- Menú de navegación para dispositivos pequeños -->
-        <div class="collapse navbar-collapse d-md-none" id="navbarNav">
-            <ul class="navbar-nav w-100 text-center">
-                <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link" href="./pages/eventos.html">Eventos</a></li>
-                <li class="nav-item"><a class="nav-link" href="./pages/campeones.html">Campeones</a></li>
-                <li class="nav-item"><a class="nav-link" href="./pages/estadisticas.html">Estadísticas</a></li>
-                <li class="nav-item"><a class="nav-link" href="./pages/horarios.html">Horarios</a></li>
-            </ul>
+        <div class="container d-flex align-items-center">
+            <a href="./index.html">
+                <img class="logos" src="./assets/img/logo.png" alt="logo">
+            </a>
+            <!-- Botón del menú hamburguesa -->
+            <button class="navbar-toggler d-md-none ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <!-- Menú de navegación para dispositivos grandes -->
+            <nav class="d-none d-md-block ms-auto">
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./pages/eventos.html">Eventos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./pages/campeones.html">Campeones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./pages/estadisticas.html">Estadísticas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./pages/horarios.html">Horarios</a></li>
+                </ul>
+            </nav>
+            <!-- Menú de navegación para dispositivos pequeños -->
+            <div class="collapse navbar-collapse d-md-none" id="navbarNav">
+                <ul class="navbar-nav text-center">
+                    <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./pages/eventos.html">Eventos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./pages/campeones.html">Campeones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./pages/estadisticas.html">Estadísticas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./pages/horarios.html">Horarios</a></li>
+                </ul>
+            </div>
+            
+            <div class="d-flex align-items-center ms-auto">
+                <button class="btn btn-outline-success d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#searchForm" aria-controls="searchForm" aria-expanded="false" aria-label="Toggle search">
+                    <i class="fas fa-search"></i>
+                </button>
+                
+                <form class="d-none d-md-flex ms-2" role="search">
+                    <input class="form-control me-2" placeholder="Buscar" id="searchInput">
+                    <button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
+                </form>
+               
+                <div class="collapse d-md-none" id="searchForm">
+                    <form class="d-flex mt-2">
+                        <input class="form-control me-2" placeholder="Buscar" id="searchInputSmall">
+                    </form>
+                </div>
+            </div>
         </div>
-        <div class="search-container ms-auto">
-            <form class="d-flex" role="search">
-                <label for="search">
-                    <input class="form-control me-2" placeholder="Buscar" id="search">
-                </label>
-                <button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
-            </form>
-        </div>
-    </div>
-</header>
+    </header>
 
     <main class="container mt-4">
         <section class="row">
