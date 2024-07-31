@@ -29,39 +29,72 @@ main.events-grid {
 }
 
 /* Pagina estadisticas */
-.luchador {
-    display: grid;
-    grid-template-columns: auto 1fr; 
-    gap: 20px; 
-    margin-bottom: 20px;
-    
-    .imagen {
-        img {
-            max-width: 250px;
-            height: auto;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-        }
+#estadisticas {
+  margin-top: 3rem;
+
+  .luchador {
+    margin-bottom: 2rem;
+    @include flex-center;
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      align-items: flex-start;
     }
-    
-    .estadisticas {
-        h3 {
-            margin-top: 0;
+
+    .luchador-info {
+      text-align: center;
+
+      @media (min-width: 768px) {
+        text-align: left;
+      }
+
+      .luchador-foto {
+        width: auto;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 0.5rem;
+        transition: transform 0.3s ease-in-out;
+
+        &:hover {
+          transform: scale(1.05);
         }
-        
+      }
+
+      .luchador-nombre {
+        font-size: large;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .luchador-detalles {
+      margin-top: 1rem;
+
+      @media (min-width: 768px) {
+        margin-top: 0;
+        margin-left: 1.5rem;
+      }
+
+      .logros, .estadisticas {
+        margin-bottom: 1rem;
+
+        h4 {
+          font-size: medium;
+          margin-bottom: 0.5rem;
+        }
+
         ul {
-            list-style-type: none;
-            padding: 0;
-            
-            li {
-                margin-bottom: 8px;
-                
-                strong {
-                    margin-right: 5px;
-                }
-            }
+          list-style-type: disc;
+          padding: 0;
+
+          li {
+            font-size: medium;
+            margin-bottom: 0.3rem;
+          }
         }
+      }
     }
+  }
 }
 
 // Pagina horarios
@@ -114,4 +147,5 @@ main.events-grid {
       }
     }
   }
+
   

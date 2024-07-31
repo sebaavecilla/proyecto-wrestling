@@ -57,30 +57,67 @@ main.events-grid {
 }
 
 /* Pagina estadisticas */
-.luchador {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 20px;
-  margin-bottom: 20px;
+#estadisticas {
+  margin-top: 3rem;
 }
-.luchador .imagen img {
-  max-width: 250px;
+#estadisticas .luchador {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  #estadisticas .luchador {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+#estadisticas .luchador .luchador-info {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  #estadisticas .luchador .luchador-info {
+    text-align: left;
+  }
+}
+#estadisticas .luchador .luchador-info .luchador-foto {
+  width: auto;
   height: auto;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s ease-in-out;
 }
-.luchador .estadisticas h3 {
-  margin-top: 0;
+#estadisticas .luchador .luchador-info .luchador-foto:hover {
+  transform: scale(1.05);
 }
-.luchador .estadisticas ul {
-  list-style-type: none;
+#estadisticas .luchador .luchador-info .luchador-nombre {
+  font-size: large;
+  margin-bottom: 1rem;
+}
+#estadisticas .luchador .luchador-detalles {
+  margin-top: 1rem;
+}
+@media (min-width: 768px) {
+  #estadisticas .luchador .luchador-detalles {
+    margin-top: 0;
+    margin-left: 1.5rem;
+  }
+}
+#estadisticas .luchador .luchador-detalles .logros, #estadisticas .luchador .luchador-detalles .estadisticas {
+  margin-bottom: 1rem;
+}
+#estadisticas .luchador .luchador-detalles .logros h4, #estadisticas .luchador .luchador-detalles .estadisticas h4 {
+  font-size: medium;
+  margin-bottom: 0.5rem;
+}
+#estadisticas .luchador .luchador-detalles .logros ul, #estadisticas .luchador .luchador-detalles .estadisticas ul {
+  list-style-type: disc;
   padding: 0;
 }
-.luchador .estadisticas ul li {
-  margin-bottom: 8px;
-}
-.luchador .estadisticas ul li strong {
-  margin-right: 5px;
+#estadisticas .luchador .luchador-detalles .logros ul li, #estadisticas .luchador .luchador-detalles .estadisticas ul li {
+  font-size: medium;
+  margin-bottom: 0.3rem;
 }
 
 .horarios-section {
