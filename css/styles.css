@@ -30,6 +30,14 @@ body {
   background-color: rgb(154, 158, 158);
 }
 
+h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #333;
+}
+
 /* Pagina eventos */
 main.events-grid {
   display: grid;
@@ -122,13 +130,6 @@ main.events-grid {
 
 .horarios-section {
   font-family: "Roboto", sans-serif;
-}
-.horarios-section h1 {
-  font-family: "Oswald", sans-serif;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  text-align: center;
-  color: #333;
 }
 .horarios-section .event {
   background-color: rgb(210, 223, 223);
